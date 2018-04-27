@@ -2,57 +2,60 @@ package reseau_social;
 
 public class User {
 
-	private String nom;
-	private String prenom;
-	private String ville;
-	private String age;
-
+	private String Nom, Prenom, Ville, Pseudo, Message;
+		
 	public User() {
-
-		nom = "";
-		prenom = "";
-		ville = "";
-		age = "";
+		System.out.println("création user");
+		Nom = "Inconnu";
+		Prenom = "Inconnu";
+		Ville = "Inconnu";
+		Pseudo = "Inconnu";
+		Message = "Inconnu";
+		}
+	
+	public String getMessage() {
+		return Message;
 	}
-
-	public User(String nom, String prenom, String ville, String age) {
-		super();
-		this.nom = nom;
-		this.prenom = prenom;
-		this.ville = ville;
-		this.age = age;
-	}
-
+	
 	public String getNom() {
-		return nom;
+		return Nom;
 	}
-
-	public void setNom(String nom) {
-		this.nom = nom;
+	
+	public String getPrenom () {
+		return Prenom;
 	}
-
-	public String getPrenom() {
-		return prenom;
+	
+	public String getVille () {
+		return Ville;
 	}
-
-	public void setPrenom(String prenom) {
-		this.prenom = prenom;
+	
+	public String getPseudo () {
+		return Pseudo;
 	}
-
-	public String getVille() {
-		return ville;
+	
+	public void setNom(String Nom) {
+		this.Nom = Nom;
 	}
-
-	public void setVille(String ville) {
-		this.ville = ville;
+	
+	public void setPrenom(String Prenom) {
+		this.Prenom = Prenom;
 	}
-
-	public String getAge() {
-		return age;
+	
+	public void setVille(String Ville) {
+		this.Ville = Ville;
 	}
-
-	public void setAge(String age) {
-		this.age = age;
+	
+	public void setPseudo(String Pseudo) {
+		this.Pseudo = Pseudo;
 	}
-
+	
+	public void setMessage(String Message) {
+		this.Message = Message;
+	}
+	
+	public static boolean isModerator() {
+		
+		return false;
+	}
+	
 }
