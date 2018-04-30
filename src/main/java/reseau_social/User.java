@@ -1,61 +1,81 @@
 package reseau_social;
 
+import javax.swing.plaf.synth.SynthSeparatorUI;
+
 public class User {
 
-	private String Nom, Prenom, Ville, Pseudo, Message;
-		
+	private String nom;
+	private String prenom;
+	private String ville;
+	private String pseudo;
+	private String message;
+
+	// Constructeur par défaut
 	public User() {
-		System.out.println("création user");
-		Nom = "Inconnu";
-		Prenom = "Inconnu";
-		Ville = "Inconnu";
-		Pseudo = "Inconnu";
-		Message = "Inconnu";
-		}
-	
-	public String getMessage() {
-		return Message;
+		nom = "Inconnu";
+		prenom = "Inconnu";
+		ville = "Inconnu";
+		pseudo = "Inconnu";
+		message = "Inconnu";
+
 	}
-	
+
+	// Accesseurs
+	/**
+	 * 
+	 * @param nom
+	 */
+
 	public String getNom() {
-		return Nom;
+		return nom;
 	}
-	
-	public String getPrenom () {
-		return Prenom;
+
+	public void setNom(String nom) {
+		this.nom = nom;
 	}
-	
-	public String getVille () {
-		return Ville;
+
+	public String getPrenom() {
+		return prenom;
 	}
-	
-	public String getPseudo () {
-		return Pseudo;
+
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
 	}
-	
-	public void setNom(String Nom) {
-		this.Nom = Nom;
+
+	public String getVille() {
+		return ville;
 	}
-	
-	public void setPrenom(String Prenom) {
-		this.Prenom = Prenom;
+
+	public void setVille(String ville) {
+		this.ville = ville;
 	}
-	
-	public void setVille(String Ville) {
-		this.Ville = Ville;
+
+	public String getPseudo() {
+		return pseudo;
 	}
-	
-	public void setPseudo(String Pseudo) {
-		this.Pseudo = Pseudo;
+
+	public void setPseudo(String pseudo) {
+		this.pseudo = pseudo;
 	}
-	
-	public void setMessage(String Message) {
-		this.Message = Message;
+
+	public String getMessage() {
+		return message;
 	}
-	
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+	public static void modifierInfo() {
+
+	}
+
+	public static void createProfil() {
+
+	}
+
 	public static boolean isModerator() {
-		
-		return false;
+		return false; // modo niveau 0
 	}
-	
+
 }
