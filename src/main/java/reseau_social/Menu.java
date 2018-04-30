@@ -6,7 +6,7 @@ public class Menu {
 
 	Scanner sc = new Scanner(System.in);
 
-	public void menu(Moderateur modA){
+	public void menu(Moderateur modA) throws NumeroException{
 		boolean afficherMenu = true;
 
 		while (afficherMenu) {
@@ -54,25 +54,37 @@ public class Menu {
 
 				int menu = sc.nextInt();
 				sc.nextLine();
+				
+				
 
-				switch (menu) {
-				case 1:
-					ShowProfil(modA);
-					break;
-				case 2:
-					User.modifierInfo();
-					break;
-				case 3:
-					writeMessage(modA);
-					break;
-				case 4:
-					changeMessage(modA);
-					break;
-				case 5:
-					logout();
-					break;
-				case 6:
-					System.out.println("test");
+				try {
+					switch (menu) {
+					case 1:
+						ShowProfil(modA);
+						break;
+					case 2:
+						User.modifierInfo();
+						break;
+					case 3:
+						writeMessage(modA);
+						break;
+					case 4:
+						changeMessage(modA);
+						break;
+					case 5:
+						logout();
+						break;
+					case 6:
+						System.out.println("test");
+
+					}
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				if(menu>6) {
+					throw new NumeroException();
 
 				}
 				afficherMenu = retMenu();

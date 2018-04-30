@@ -6,7 +6,7 @@ public class App {
 
 	Scanner sc = new Scanner(System.in);
 
-	public static void main(String[] args){ // il s'agit de la fonction principale
+	public static void main(String[] args) { // il s'agit de la fonction principale
 
 		User user = new User();
 		user.setNom("Bouhassoun");
@@ -32,7 +32,12 @@ public class App {
 		Post post[][] = new Post[2][2];
 
 		Menu menu = new Menu();
-		menu.menu(modA);
+		try {
+			menu.menu(modA);
+		} catch (NumeroException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 }

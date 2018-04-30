@@ -11,7 +11,7 @@ public class User {
 	private String message;
 
 	// Constructeur par défaut
-	public User() {
+	public User(){
 		nom = "Inconnu";
 		prenom = "Inconnu";
 		ville = "Inconnu";
